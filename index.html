@@ -101,43 +101,95 @@
     }
     #contact p[style*="max-width"] { max-width: 100% !important; }
 
+    /* ===== DETAIL VIEW ===== */
+
     /* Detail view header */
     #detail-view header {
       padding: 14px 20px !important;
+      gap: 12px !important;
     }
+    /* Shrink logo in detail header */
+    #detail-view header img[style*="width: 170px"] {
+      width: 52px !important;
+      height: 52px !important;
+    }
+    /* Hide name/title text next to logo on very small screens */
+    #detail-view header > div:first-child > div:last-child {
+      display: none !important;
+    }
+    /* "חזרה לעמוד הבית" link — smaller */
+    #detail-view header a { font-size: 13px !important; }
 
-    /* Detail view hero/intro strip */
+    /* Detail view hero strip (blue background) */
     #detail-view section[style*="D9EAF3"] {
       flex-direction: column !important;
-      padding: 36px 20px !important;
-      gap: 24px !important;
+      padding: 32px 20px 28px !important;
+      gap: 20px !important;
     }
-    #detail-view section[style*="D9EAF3"] h1 { font-size: 30px !important; }
-    #detail-view section[style*="D9EAF3"] p  { font-size: 15px !important; }
+    #detail-view section[style*="D9EAF3"] h1 {
+      font-size: 30px !important;
+      line-height: 1.2 !important;
+    }
+    #detail-view section[style*="D9EAF3"] p {
+      font-size: 15px !important;
+      max-width: 100% !important;
+    }
+    /* Hero image in detail view — full width, shorter */
+    #detail-view section[style*="D9EAF3"] img {
+      max-width: 100% !important;
+      height: 200px !important;
+      border-radius: 18px !important;
+    }
 
-    /* Chapter sections */
-    #chapters-section section { padding-left: 20px !important; padding-right: 20px !important; }
+    /* 3-feature grid section */
+    #detail-view section[style*="grid-template-columns"] {
+      padding: 32px 20px !important;
+      gap: 16px !important;
+    }
 
-    /* Course feature sections */
-    #detail-view section[style*="72px"] {
+    /* Disclaimer section */
+    #detail-view section[style*="0 72px 8px"] {
+      padding: 0 20px 8px !important;
+    }
+
+    /* FAQ section */
+    #detail-view section[style*="FBEFC6"] {
+      padding: 40px 20px !important;
+    }
+    #detail-view section[style*="FBEFC6"] h2 { font-size: 22px !important; }
+    /* FAQ details items */
+    #detail-view details { padding: 18px 20px !important; }
+    #detail-view details summary { font-size: 15px !important; }
+
+    /* Lock screen outer */
+    #lock-screen {
+      padding: 24px 16px 48px !important;
+    }
+    /* Lock screen inner card */
+    #lock-screen > div {
+      max-width: 100% !important;
+      padding: 32px 20px !important;
+      gap: 20px !important;
+    }
+    /* Price number */
+    #lock-screen [style*="font-size: 50px"] {
+      font-size: 40px !important;
+    }
+    /* Lock screen max-width paragraph */
+    #lock-screen p[style*="max-width"] { max-width: 100% !important; }
+    /* Lock screen feature pills — smaller on mobile */
+    #lock-screen [style*="border-radius: 999px"][style*="border: 1px"] {
+      font-size: 12px !important;
+      padding: 6px 10px !important;
+    }
+
+    /* Input field in lock screen */
+    #lock-screen input[type=text] { font-size: 16px !important; }
+
+    /* Chapter sections (video list) */
+    #chapters-section section {
       padding-left: 20px !important;
       padding-right: 20px !important;
-    }
-    #detail-view section[style*="72px; background: #FBEFC6"] {
-      padding: 48px 20px !important;
-    }
-
-    /* Lock screen */
-    #lock-screen {
-      padding: 28px 20px 48px !important;
-    }
-    #lock-screen > div { max-width: 100% !important; }
-
-    /* Lock screen max-width boxes */
-    #lock-screen [style*="max-width: 560px"],
-    #lock-screen [style*="max-width: 520px"],
-    #lock-screen [style*="max-width: 480px"] {
-      max-width: 100% !important;
     }
 
     /* Footer terms bar */
@@ -145,9 +197,15 @@
       padding: 16px 20px !important;
     }
 
-    /* Home view bottom strip */
-    #home-view section[style*="64px 72px; background: #3B2A20"],
-    #home-view section[style*="72px; background: #3B2A20"] {
+    /* Dark CTA / contact strip in detail view */
+    #detail-view section[style*="3B2A20"] {
+      padding: 40px 20px !important;
+    }
+    #detail-view section[style*="3B2A20"] h2 { font-size: 22px !important; }
+    #detail-view section[style*="3B2A20"] p  { font-size: 15px !important; max-width: 100% !important; }
+
+    /* Home view dark strip */
+    #home-view section[style*="3B2A20"] {
       padding: 48px 20px !important;
     }
 

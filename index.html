@@ -17,6 +17,146 @@
     .nav-link { font-size: 15px; font-weight: 600; color: #3B2A20; white-space: nowrap; }
     .nav-link:hover { color: #C7456B; }
     .card-link:hover { color: #9C3554; }
+
+  /* ===== MOBILE RESPONSIVE ===== */
+  @media (max-width: 768px) {
+
+    /* Header */
+    header {
+      padding: 14px 20px !important;
+      flex-wrap: wrap !important;
+      gap: 10px !important;
+    }
+    nav {
+      overflow-x: auto !important;
+      flex-wrap: nowrap !important;
+      gap: 16px !important;
+      -webkit-overflow-scrolling: touch !important;
+      scrollbar-width: none !important;
+      width: 100% !important;
+      order: 3 !important;
+    }
+    nav::-webkit-scrollbar { display: none; }
+    .nav-link { font-size: 13px !important; }
+
+    /* Hero section */
+    #home {
+      flex-direction: column !important;
+      padding: 36px 20px 32px !important;
+      gap: 24px !important;
+      border-radius: 0 0 28px 28px !important;
+    }
+    #home h1 { font-size: 36px !important; line-height: 1.2 !important; }
+    #home h2 { font-size: 17px !important; }
+    #home p { font-size: 15px !important; max-width: 100% !important; }
+    /* Hide decorative hero image on mobile */
+    #home > div:last-child { display: none !important; }
+    /* CTA buttons */
+    #home a[style*="padding: 16px 34px"] {
+      padding: 13px 22px !important;
+      font-size: 15px !important;
+    }
+
+    /* About section */
+    #about {
+      flex-direction: column !important;
+      padding: 48px 20px !important;
+      gap: 28px !important;
+      align-items: center !important;
+    }
+    /* About image container */
+    #about > div:first-child {
+      flex: none !important;
+      width: auto !important;
+    }
+    #about > div:first-child > div {
+      width: 220px !important;
+      height: 220px !important;
+    }
+    #about > div:first-child > div img {
+      width: 200px !important;
+      height: 200px !important;
+    }
+
+    /* Treatments */
+    #treatments { padding: 48px 20px !important; }
+
+    /* Courses section */
+    #courses { padding: 48px 20px !important; }
+
+    /* 2-column grids → 1 column */
+    [style*="grid-template-columns: repeat(2"] {
+      grid-template-columns: 1fr !important;
+    }
+    /* 3-column grids → 1 column */
+    [style*="grid-template-columns: repeat(3"] {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* Contact section */
+    #contact {
+      flex-direction: column !important;
+      padding: 48px 20px !important;
+      gap: 32px !important;
+    }
+    #contact p[style*="max-width"] { max-width: 100% !important; }
+
+    /* Detail view header */
+    #detail-view header {
+      padding: 14px 20px !important;
+    }
+
+    /* Detail view hero/intro strip */
+    #detail-view section[style*="D9EAF3"] {
+      flex-direction: column !important;
+      padding: 36px 20px !important;
+      gap: 24px !important;
+    }
+    #detail-view section[style*="D9EAF3"] h1 { font-size: 30px !important; }
+    #detail-view section[style*="D9EAF3"] p  { font-size: 15px !important; }
+
+    /* Chapter sections */
+    #chapters-section section { padding-left: 20px !important; padding-right: 20px !important; }
+
+    /* Course feature sections */
+    #detail-view section[style*="72px"] {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+    #detail-view section[style*="72px; background: #FBEFC6"] {
+      padding: 48px 20px !important;
+    }
+
+    /* Lock screen */
+    #lock-screen {
+      padding: 28px 20px 48px !important;
+    }
+    #lock-screen > div { max-width: 100% !important; }
+
+    /* Lock screen max-width boxes */
+    #lock-screen [style*="max-width: 560px"],
+    #lock-screen [style*="max-width: 520px"],
+    #lock-screen [style*="max-width: 480px"] {
+      max-width: 100% !important;
+    }
+
+    /* Footer terms bar */
+    [style*="padding: 16px 72px"] {
+      padding: 16px 20px !important;
+    }
+
+    /* Home view bottom strip */
+    #home-view section[style*="64px 72px; background: #3B2A20"],
+    #home-view section[style*="72px; background: #3B2A20"] {
+      padding: 48px 20px !important;
+    }
+
+    /* General: any remaining 72px side padding in sections */
+    section[style*=" 72px"] {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+  }
   </style>
 
 </head>
